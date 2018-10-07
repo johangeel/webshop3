@@ -20,33 +20,26 @@ $base-font-family: $font-stack-system;
 $heading-font-family: $base-font-family;
 
 // Font sizes
-$heading1-font-size: 2.5em;
-$heading2-font-size: 1.8em;
-$article-font-size: 1.125em;
-$small-font-size: 0.95em;
-$recommended-reading-font-size: 1.4em;
+$heading1-font-size: 2.236em;
+$heading2-font-size: 1.618em;
+$article-font-size: 1em;
+
 
 // Line height
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$base-border-radius: 0.5em;
+$base-border-radius: 0.3em;
 $base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2.5;
 $medium-spacing: $base-spacing / 1.5;
-$small-spacing: $base-spacing / 2;
 $base-z-index: 0;
-$teaser-image-width: 100%;
-$teaser-image-height: 228px;
 $main-image-width: 100%;
 $main-image-height: 348px;
-$content-image-width: 100%;
-$content-image-height: 264px;
-$author-image-width: 108px;
-$author-image-height: 108px;
 
 // Colors
-$action-color: #d50032;
+$action-color: #FF4D4D;
 $white: #fff;
 $light-gray: #F7F7F7;
 $medium-gray: #999;
@@ -55,7 +48,7 @@ $darkest-gray: #2B2B2B;
 
 
 // Shadows
-$shadow-normal: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+$shadow-normal: 0 2px 4px 0 rgba(14,30,37,.12);
 $shadow-hover: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 $shadow-active: 0 4px 6px rgba(50, 50, 93, 0.04), 0 1px 3px rgba(0, 0, 0, 0.04);
 

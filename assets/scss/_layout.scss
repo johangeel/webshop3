@@ -1,11 +1,58 @@
 body {
   background-color: #FAFAFA;
 }
-
-.flex-row{
+.left{
+  padding: 2em;
+}
+.right{
+  padding: 2em;
+}
+/************ General grid system elements*/
+.flex--row{
   @include flex-row();
 }
 
-.flex-column{
+.flex--column{
   @include flex-column();
+}
+
+.flex--between{
+  @include flex-between();
+}
+
+.container--full {
+    @include grid-container();
+    margin: 0px auto;
+}
+
+.container--large {
+    @include grid-container();
+    margin: 0px auto;
+    max-width: 1280px;
+}
+
+.container--medium {
+    @include grid-container();
+    margin: 0px auto;
+    max-width: 1044px;
+}
+
+.container--small {
+    @include grid-container();
+    margin: 0px auto;
+    max-width: 768px;
+}
+
+section{
+  @include grid-column(12);
+  @include grid-media($media--tablet) {
+    margin-top: 6em;
+    margin-bottom: 6em;
+    text-align: inherit;
+  }
+
+  @include grid-media($media--desktop) {
+    margin-top: 9em;
+    margin-bottom: 9em;
+  }
 }

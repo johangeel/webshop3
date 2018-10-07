@@ -10,9 +10,9 @@
 // Elements
 // @import "typography";
 // @import "asian";
-@import "tables";
+// @import "tables";
 // @import "buttons";
-@import "forms";
+// @import "forms";
 // @import "labels";
 // @import "codes";
 // @import "media";
@@ -27,12 +27,12 @@
 // @import "badges";
 // @import "breadcrumbs";
 // @import "bars";
-// @import "cards";
+@import "cards";
 // @import "chips";
 // @import "dropdowns";
 // @import "empty";
 // @import "menus";
-@import "modals";
+// @import "modals";
 // @import "navs";
 // @import "pagination";
 // @import "panels";
@@ -44,5 +44,5 @@
 // @import "tooltips";
 
 // Utility classes
-@import "animations";
+// @import "animations";
 // @import "utilities";
