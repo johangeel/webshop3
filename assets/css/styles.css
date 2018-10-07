@@ -705,10 +705,10 @@ hr {
   padding: 1.5em; }
 
 /***** Custom Layout Styles *****/
+/************ General system elements*/
 body {
-  background-color: #FAFAFA; }
+  background-color: #F7F7F7; }
 
-/************ General grid system elements*/
 .flex--row {
   box-sizing: border-box;
   display: -webkit-box;
@@ -780,6 +780,7 @@ body {
     content: "";
     display: block; }
 
+/************ General layout elements*/
 section {
   box-sizing: border-box;
   display: -webkit-box;
@@ -843,21 +844,35 @@ section {
     margin-left: calc(8.3333333333% - 21.6666666667px + 40px); } }
 @media only screen and (min-width: 768px) {
   .right {
-    width: calc(100% - 40px);
+    width: calc(66.6666666667% - 33.3333333333px);
     float: left;
     margin-left: 20px;
-    margin-left: calc(41.6666666667% - 28.3333333333px + 40px); } }
-@media only screen and (min-width: 1024px) {
-  .right {
-    width: calc(100% - 40px);
-    float: left;
-    margin-left: 20px;
-    margin-left: calc(33.3333333333% - 26.6666666667px + 40px); } }
-@media only screen and (min-width: 1200px) {
-  .right {
-    width: calc(100% - 40px);
-    float: left;
-    margin-left: 20px;
-    margin-left: calc(33.3333333333% - 26.6666666667px + 40px); } }
+    margin-left: 330px; } }
+
+/************ Custom layout elements*/
+.card {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.card--section {
+  padding-top: 1em;
+  padding-bottom: 1em; }
+  .card--section h1 {
+    margin: 0; }
+  .card--section p {
+    margin: 0; }
 
 /*# sourceMappingURL=styles.css.map */

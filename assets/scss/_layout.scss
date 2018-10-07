@@ -1,8 +1,8 @@
+/************ General system elements*/
 body {
-  background-color: #FAFAFA;
+  background-color: $light-gray;
 }
 
-/************ General grid system elements*/
 .flex--row{
   @include flex-row();
 }
@@ -38,6 +38,7 @@ body {
     max-width: 768px;
 }
 
+/************ General layout elements*/
 section{
   @include flex-column();
   @include grid-column(12);
@@ -47,14 +48,9 @@ section{
     @include flex-row();
 
     text-align: inherit;
-
   }
 
-  @include grid-media($media--desktop) {
-
-  }
 }
-
 
 .left{
   @include grid-media($media--landscape) {
@@ -76,17 +72,22 @@ section{
 }
 
   @include grid-media($media--tablet) {
-    @include grid-column(12);
-    @include grid-push(5);
+    @include grid-column(8);
+    margin-left: 330px;
   }
+}
 
-  @include grid-media($media--desktop) {
-    @include grid-column(12);
-    @include grid-push(4);
+/************ Custom layout elements*/
+.card{
+  @include flex-column();
+}
+.card--section{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  & h1{
+    margin: 0;
   }
-
-  @include grid-media($media--fullscreen) {
-    @include grid-column(12);
-    @include grid-push(4);
+  & p{
+    margin: 0;
   }
 }
