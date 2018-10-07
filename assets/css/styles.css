@@ -646,7 +646,7 @@ h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
   font-size: 1.25em;
   line-height: 1.2;
-  margin: 0 0 0.6em; }
+  margin: 0.5em 0 0; }
 
 h1 {
   color: #2B2B2B;
@@ -659,24 +659,34 @@ h1 {
     h1 {
       font-size: 2.6832em; } }
 
-h2,
-h3 {
+h2 {
   color: #2B2B2B;
   font-weight: 700;
   font-size: 1.618em;
   margin: 2px 0 10px; }
   @media only screen and (min-width: 768px) {
-    h2,
-    h3 {
+    h2 {
       font-size: 1.9416em; } }
   @media only screen and (min-width: 1024px) {
-    h2,
-    h3 {
+    h2 {
       font-size: 2.2652em; } }
+
+h3 {
+  color: #2B2B2B;
+  font-weight: 600;
+  font-size: 1.309em;
+  margin: 2px 0 10px; }
+  @media only screen and (min-width: 768px) {
+    h3 {
+      font-size: 1.5708em; } }
+  @media only screen and (min-width: 1024px) {
+    h3 {
+      font-size: 1.8326em; } }
 
 p {
   font-size: 1em;
-  margin: 0 0 .5em; }
+  margin: 0.5em 0 0;
+  max-width: 680px; }
 
 a {
   color: #000;
@@ -701,6 +711,7 @@ hr {
   box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
   -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
   margin-top: 1.5em;
+  margin-bottom: 1.5em;
   border-radius: 0.5em;
   padding: 1.5em; }
 
@@ -849,6 +860,24 @@ section {
     margin-left: 20px;
     margin-left: 330px; } }
 
+@media only screen and (min-width: 768px) {
+  .card--footer {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; } }
+
 /************ Custom layout elements*/
 .card {
   box-sizing: border-box;
@@ -865,14 +894,38 @@ section {
   -ms-flex-direction: column;
   flex-direction: column;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  position: relative; }
 
 .card--section {
+  position: inherit;
   padding-top: 1em;
   padding-bottom: 1em; }
-  .card--section h1 {
-    margin: 0; }
-  .card--section p {
-    margin: 0; }
+
+.card--title img {
+  align-self: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  height: 150px; }
+.card--title::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  bottom: 0;
+  background: #F7F7F7; }
+
+.card--main::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  bottom: 0;
+  background: #F7F7F7; }
 
 /*# sourceMappingURL=styles.css.map */

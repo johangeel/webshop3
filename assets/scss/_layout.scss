@@ -77,17 +77,52 @@ section{
   }
 }
 
+.card--footer{
+  @include grid-media($media--tablet) {
+    @include flex-column();
+
+  }
+}
 /************ Custom layout elements*/
 .card{
   @include flex-column();
+  position: relative;
 }
+
 .card--section{
+  position: inherit;
   padding-top: 1em;
   padding-bottom: 1em;
-  & h1{
-    margin: 0;
+}
+
+.card--title{
+  & img{
+    align-self: center;
+    border-radius: 50%;
+    box-shadow: $shadow-normal;
+    -webkit-box-shadow: $shadow-normal;
+    height: 150px;
   }
-  & p{
-    margin: 0;
+
+    &::before{
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      bottom: 0;
+      background: $light-gray;
   }
+}
+
+.card--main::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    bottom: 0;
+    background: $light-gray;
 }

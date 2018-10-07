@@ -17,7 +17,7 @@ h6 {
   font-family: $heading-font-family;
   font-size: modular-scale(1);
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  margin: 0.5em 0 0;
 }
 
 h1 {
@@ -33,8 +33,7 @@ h1 {
   }
 }
 
-h2,
-h3 {
+h2 {
   color: $base-header-color;
   font-weight: 700;
   font-size: $heading2-font-size;
@@ -49,9 +48,25 @@ h3 {
   }
 }
 
+h3 {
+  color: $base-header-color;
+  font-weight: 600;
+  font-size: $heading3-font-size;
+  margin: 2px 0 10px;
+
+  @include grid-media($media--tablet) {
+    font-size: $heading3-font-size * 1.2;
+  }
+
+  @include grid-media($media--desktop) {
+    font-size: $heading3-font-size * 1.4;
+  }
+}
+
 p {
   font-size: $article-font-size;
-  margin: 0 0 .5em;
+  margin: 0.5em 0 0;
+  max-width: 680px;
 }
 
 a {
