@@ -1,12 +1,7 @@
 body {
   background-color: #FAFAFA;
 }
-.left{
-  padding: 2em;
-}
-.right{
-  padding: 2em;
-}
+
 /************ General grid system elements*/
 .flex--row{
   @include flex-row();
@@ -44,15 +39,54 @@ body {
 }
 
 section{
+  @include flex-column();
   @include grid-column(12);
+  text-align: center;
+
   @include grid-media($media--tablet) {
-    margin-top: 6em;
-    margin-bottom: 6em;
+    @include flex-row();
+
     text-align: inherit;
+
   }
 
   @include grid-media($media--desktop) {
-    margin-top: 9em;
-    margin-bottom: 9em;
+
+  }
+}
+
+
+.left{
+  @include grid-media($media--landscape) {
+    @include grid-column(10);
+    @include grid-push(1);
+}
+  @include grid-media($media--tablet) {
+    position: fixed;
+    @include grid-column(5);
+    @include grid-push(0);
+    max-width: 290px;
+  }
+}
+
+.right{
+  @include grid-media($media--landscape) {
+    @include grid-column(10);
+    @include grid-push(1);
+}
+
+  @include grid-media($media--tablet) {
+    @include grid-column(12);
+    @include grid-push(5);
+  }
+
+  @include grid-media($media--desktop) {
+    @include grid-column(12);
+    @include grid-push(4);
+  }
+
+  @include grid-media($media--fullscreen) {
+    @include grid-column(12);
+    @include grid-push(4);
   }
 }
