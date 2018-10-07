@@ -67,9 +67,9 @@ $_button-background-color-active: darken($action-color, 5%);
 }
 
 .button--try {
-  border: 0.07em solid $bizzerd-orange;
+  border: 0.07em solid $action-color;
   background-color:transparent;
-  color:$bizzerd-orange;
+  color:$action-color;
   transition: $base-duration--fast $base-timing;
   transition-property: border-color, color;
 
@@ -100,12 +100,12 @@ $_button-background-color-active: darken($action-color, 5%);
 
   &:focus {
       background-color: inherit;
-      color: $bizzerd-orange;
+      color: $action-color;
   }
 
   &:hover {
     background-color: inherit;
-    color: $bizzerd-orange;
+    color: $action-color;
   }
 
   &:active {
@@ -120,12 +120,12 @@ $_button-background-color-active: darken($action-color, 5%);
 
   &:focus {
       background-color: inherit;
-      color: $bizzerd-orange;
+      color: $action-color;
   }
 
   &:hover {
     background-color: inherit;
-    color: $bizzerd-orange;
+    color: $action-color;
   }
 
   &:active {

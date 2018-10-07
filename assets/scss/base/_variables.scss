@@ -1,37 +1,4 @@
-// Neat Grid
-$neat-grid--default: (
-  columns: 4,
-  gutter: 20px,
-);
-
-$neat-grid--tablet: (
-  columns: 8,
-  gutter: 32px,
-  media: "(min-width: 768px)"
-);
-
-$neat-grid--desktop: (
-  columns: 12,
-  gutter: 44px,
-  media: "(min-width: 1024px)"
-);
-
-$neat-grid--fullscreen: (
-  columns: 16,
-  gutter: 56px,
-  media: "(min-width: 1200px)"
-);
-
-$neat-grid--double: (
-  columns: 2,
-  gutter: 120px,
-);
-
-$neat-grid--triple: (
-  columns: 3,
-  gutter: 80px,
-);
-
+// Media queries
 $media--landscape: (
 media: 550px,
 );
@@ -79,7 +46,7 @@ $author-image-width: 108px;
 $author-image-height: 108px;
 
 // Colors
-$bizzerd-orange: #d50032;
+$action-color: #d50032;
 $white: #fff;
 $light-gray: #F7F7F7;
 $medium-gray: #999;
@@ -95,7 +62,6 @@ $shadow-active: 0 4px 6px rgba(50, 50, 93, 0.04), 0 1px 3px rgba(0, 0, 0, 0.04);
 // Font Colors
 $base-header-color: $darkest-gray;
 $base-font-color: $dark-gray;
-$action-color: $bizzerd-orange;
 
 // Border
 $base-border-color: $medium-gray;

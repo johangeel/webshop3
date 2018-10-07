@@ -24,11 +24,11 @@ h1 {
   color: $base-header-color;
   font-size: $heading1-font-size;
   font-weight: 700;
-  @include grid-media($neat-grid--tablet) {
+  @include grid-media($media--tablet) {
     font-size: $heading1-font-size * 1.2;
   }
 
-  @include grid-media($neat-grid--desktop) {
+  @include grid-media($media--desktop) {
     font-size: $heading1-font-size * 1.4;
   }
 }
@@ -40,34 +40,18 @@ h3 {
   font-size: $heading2-font-size;
   margin: 2px 0 10px;
 
-  @include grid-media($neat-grid--tablet) {
+  @include grid-media($media--tablet) {
     font-size: $heading2-font-size * 1.2;
   }
 
-  @include grid-media($neat-grid--desktop) {
+  @include grid-media($media--desktop) {
     font-size: $heading2-font-size * 1.4;
   }
-}
-
-h5 {
-  color: $bizzerd-orange;
-  font-size:16px;
-  margin: 0 0 .5em;
 }
 
 p {
   font-size: $article-font-size;
   margin: 0 0 .5em;
-}
-
-.meta {
-  color: $dark-gray;
-  text-transform: uppercase;
-  opacity:0.5;
-
-  #recent-posts & {
-    font-size:$small-font-size;
-  }
 }
 
 a {
