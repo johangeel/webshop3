@@ -42,7 +42,7 @@ body {
 section{
   @include flex-column();
   @include grid-column(12);
-  text-align: center;
+  // text-align: center;
 
   @include grid-media($media--tablet) {
     @include flex-row();
@@ -125,4 +125,19 @@ section{
     height: 2px;
     bottom: 0;
     background: $light-gray;
+}
+
+.work--title span{
+  @include grid-media($media--desktop) {
+    position: absolute;
+    right: 0px;
+    top: 26px;
+  }
+
+  @include grid-media($media--fullscreen) {
+    left: 510px;
+  }
+}
+li{
+    max-width: 560px;
 }
