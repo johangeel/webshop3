@@ -73,7 +73,7 @@ a {
   color: #000;
   text-decoration: none;
   text-decoration-skip: ink;
-  transition: color $base-duration $base-timing;
+  transition: color $base-duration--fast $base-timing;
 
 
   &:hover {
@@ -92,4 +92,8 @@ hr {
   border-right: 0;
   border-top: 0;
   margin: $base-spacing 0;
+}
+
+span{
+  font-size: 1em;
 }

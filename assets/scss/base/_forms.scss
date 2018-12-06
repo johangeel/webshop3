@@ -36,16 +36,14 @@ textarea {
   box-sizing: border-box;
   margin-bottom: 1.25rem;
   padding: 1rem .5rem 1rem .5rem;
-  transition: all $base-duration--fast $base-timing;
   width: 100%;
 
   &:hover {
-    border-color: shade($base-border-color, 20%);
+    border-color: darken($action-color, 10%);
   }
 
   &:focus {
     border-color: darken($action-color, 10%);
-    box-shadow: $_form-box-shadow-focus;
     outline: none;
 
       &::placeholder {
@@ -64,7 +62,6 @@ textarea {
 
   &::placeholder {
     color: tint($base-font-color, 40%);
-    transition: all $base-duration $base-timing;
 
   }
 }

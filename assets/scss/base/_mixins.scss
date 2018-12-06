@@ -28,9 +28,6 @@
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 @mixin flex-column() {
@@ -50,9 +47,6 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 @mixin flex-between{

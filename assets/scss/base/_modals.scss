@@ -1,0 +1,40 @@
+// MODALS
+// ==============================
+
+$modal-shadow: true !default;
+$modal-bg-color: $white !default;
+$modal-mask-color: $medium-gray !default;
+$modal-content-bg-color: $light-gray !default;
+
+.modal--mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba($modal-mask-color, 0.5);
+    z-index: 10;
+}
+
+.modal {
+  background: $white;
+  box-shadow: $shadow-normal;
+  -webkit-box-shadow: $shadow-normal;
+  border-radius: 0.5em;
+  padding: 1.5em 3em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  max-width: 620px;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  @include flex-column();
+
+  & h2{
+    margin: .1em 0 .2em 0;
+  }
+  p{
+    margin: .0 0 2em 0;
+  }
+}

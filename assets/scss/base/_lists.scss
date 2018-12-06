@@ -1,17 +1,22 @@
 ul,
 ol {
   list-style-type: none;
-  margin: 15px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
   padding: 0;
 }
 
 dl {
   margin: 0;
+  position: relative;
+  @include flex-row();
+  z-index: 0;
+  padding: 0.5em 0.5em;
 }
 
 dt {
   font-weight: 600;
   margin: 0;
+  min-width: 10em;
 }
 
 dd {
@@ -24,7 +29,6 @@ li {
 
 li a {
   color:$base-font-color;
-  font-size:1.125em;
   padding: 0;
 }
 

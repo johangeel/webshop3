@@ -23,7 +23,7 @@ $heading-font-family: $base-font-family;
 $heading1-font-size: 2.236em;
 $heading2-font-size: 1.618em;
 $heading3-font-size: 1.309em;
-$article-font-size: 1em;
+$article-font-size: 0.9em;
 
 
 // Line height
@@ -40,10 +40,12 @@ $main-image-width: 100%;
 $main-image-height: 348px;
 
 // Colors
-$action-color: #FF4D4D;
+$action-color: #F7A823;
 $white: #fff;
 $light-gray: #F7F7F7;
+$lightmedium-gray: #CACACA;
 $medium-gray: #999;
+$darkmedium-gray: #585858;
 $dark-gray: #444;
 $darkest-gray: #2B2B2B;
 
@@ -59,17 +61,17 @@ $base-font-color: $dark-gray;
 
 // Border
 $base-border-color: $medium-gray;
-$base-border: 1px solid $base-border-color;
+$base-border: 1px solid lighten($base-border-color, 15%);
 
 // Background Colors
 $base-background-color: $white;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Focus
-$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-color: darken($action-color, 10);
 $focus-outline-width: 3px;
 $focus-outline: $focus-outline-width solid $focus-outline-color;
-$focus-outline-offset: 2px;
+$focus-outline-offset: -3px;
 
 // Animations
 $base-duration--fast: 180ms;
