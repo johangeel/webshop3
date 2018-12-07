@@ -350,11 +350,17 @@ $dashboard--sidebar-width: 220px;
 
 .dashboard--main-content{
   @include flex-row();
+  flex-wrap: wrap;
+  margin-top: 9em;
+  width: 680px;
+  @include grid-media($media--landscape) {
+  width: auto;
+  }
 }
 
 .dashboard--card{
   position: relative;
-  margin: 7em 0em 1em 1em;
+  margin: 1em 1em 1em 1em;
   padding: 1em;
   min-width: 480px;
 }
@@ -427,6 +433,21 @@ dl::before{
 
 .table--placeholder{
   color: rgba(14,30,37,0.38);
+}
+
+.dashboard--nav{
+  @include flex-row();
+  padding: 1em 1em;
+  height: 60px;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  top: 0;
+  left: 0;
+  & li{
+    margin-right: 2em;
+  }
 }
 
 /************ Design tool layout elements */
@@ -598,8 +619,6 @@ $toolbar--right-width: 400px;
   overflow-y: auto;
   justify-content: flex-start;
 }
-
-
 
 .pane--item{
   width: 100%;
