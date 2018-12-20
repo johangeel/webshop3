@@ -97,7 +97,8 @@ $_button-background-color-active: darken($action-color, 5%);
   padding: 0.4em;
   transition: $base-duration--fast $base-timing;
   transition-property: color;
-
+  text-transform: inherit;
+  
   &:focus {
       background-color: inherit;
       color: $action-color;

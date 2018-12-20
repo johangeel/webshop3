@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <div class="dashboard--wrapper">
+    <div class="dashboard--sidebar">
+      <a href="" class="sidebar--logo">
+        <img src="./assets/img/bizzerd_logo.png" alt="Klik hier om naar home te gaan">
+      </a>
+      <a class="sidebar--item selected">
+        <span>Visitekaartjes beheren</span>
+      </a>
+      <a class="sidebar--item">
+        <span>Ontwerp wijzigen</span>
+      </a>
+      <a class="sidebar--item">
+        <span>Instellingen</span>
+      </a>
+      <div class="sidebar--second">
+        <a href="" class="button button--primary">Uitloggen</a>
+      </div>
+    </div>
+    <div class="dashboard--main">
+      <div class="dashboard--main-content">
+        <div class="container container--header">
+          <div class="navigation">
+            <nav>
+              <ul class="dashboard--nav">
+                <li><a href="./collegaswijzigen.html">Collega's wijzigen</a></li>
+                <li><a href="./collegastoevoegen.html">Collega's toevoegen</a></li>
+                <li><a href="./collegasuitnodigen.html">Collega's uitnodigen</a></li>
+                <li><a href="./registratielink.html" class="active">Registratielink genereren</a></li>
+              </ul>
+            </nav>
+            <header class="navigation--header">
+              <h3 class="section-title">Registratielink genereren</h3>
+            </header>
+          </div>
+        </div>
+        <div class="container">
+          <div class="cards--wrapper">
+            <div class="card dashboard--card element--card">
+              <div class="card--header">
+                <p>Stel in hoelang de link geldig is. Iedereen met deze link kan deelnemen aan bizzerd.
+                </p>
+              </div>
+              <div class="card--main">
+                <select name="select_shared_invite_expiration" class="sharelink--selector">
+                  <option value="1">Verloopt in 1 dag</option>
+                  <option value="7">Verloopt in 7 dagen</option>
+                  <option selected="selected" value="30">Verloopt in 30 dagen</option>
+                  <option value="365000">Altijd geldig</option>
+                </select>
+                <div class="invitelink--message">
+                  <div class="invitelink--container">
+                    <input name="" type="text" id="" class="invitelink" value="" data-invite-url="" readonly="" onclick="this.select();">
+                    <button type="" class="button button--primary">
+                      Kopiëren</button>
+                  </div>
+                  <div class="invitelink--text">
+                    <p>Deze link verloopt in ... dagen. Deze link verwijderen of een andere link aanmaken?</p>
+                    <a href="" class="button button--text">Link deactiveren</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card--footer">
+                <button type="" class="button button--primary">
+                  Genereren</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>

@@ -52,6 +52,10 @@ body {
   }
 }
 
+.form-group{
+  margin-top: 1.5em;
+}
+
 .form-group__footer{
   margin-top: 2em;
   margin-bottom: 2em;
@@ -94,9 +98,6 @@ body {
   & h2{
     margin: .1em 0 .2em 0;
   }
-  p{
-    margin: .0 0 2em 0;
-  }
 }
 
 .card--graphic{
@@ -111,6 +112,9 @@ body {
       height: 12.5em;
     }
   }
+}
+.input-field{
+  margin-bottom: 1em;
 }
 
 .input-field__label{
@@ -254,12 +258,13 @@ body {
   width: 2em;
 }
 
-.confirmation-code--error{
+.alert--error{
   @include flex-row();
   border-radius: 0.3em;
   background-color: #FBE3e4;
   border: 1px solid rgba(215,43,63,.4);
   padding: 1em;
+  margin-top: 2em;
   margin-bottom: 2em;
   align-items: center;
   & svg{
@@ -295,40 +300,197 @@ body {
 }
 
 /************ Dashboard layout elements*/
-$dashboard--sidebar-width: 220px;
+$dashboard--sidebar-width: 210px;
 .dashboard--wrapper{
-  @include flex-row();
+  @include flex-column();
+  height: 100%;
+  width: 100%;
 }
 
 .dashboard--main{
-    position: absolute;
-    left: $dashboard--sidebar-width;
-    width: calc(100% - #{$dashboard--sidebar-width});
+    position: relative;
+    width: 100%;
     height: 100%;
+
+    @include grid-media($media--desktop) {
+      position: absolute;
+      left: $dashboard--sidebar-width;
+      width: calc(100% - #{$dashboard--sidebar-width});
+    }
+}
+
+.dashboard--main-content{
+  @include flex-column();
+  min-height: 100vh;
+  padding: 1em 0;
+}
+
+.container{
+  @include grid-container();
+  // margin-left: auto;
+  // margin-right: auto;
+  width: auto;
+  position: relative;
+  @include grid-media($media--desktop) {
+    max-width: 1080px;
+  }
+}
+
+.container--header{
+  @include grid-media($media--desktop) {
+  }
+}
+
+.cards--wrapper{
+  @include flex-row();
+  flex-wrap: wrap;
+  justify-content: center;
+  @include grid-media($media--desktop) {
+    justify-content: flex-start;
+  }
+}
+
+.dashboard--nav{
+  @include flex-row();
+  padding: .5em 0;
+  position: relative;
+  align-items: center;
+  width: auto;
+  flex-wrap: wrap;
+
+  &::after{
+    content: "";
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $lightmedium-gray;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0.5em;
+  }
+
+  & li{
+    margin: 0 2em 0.5em 0;
+    width: auto;
+  }
+  >li>a{
+    padding: .25em .25em;
+    font-weight: normal;
+  }
+  >li>a.active{
+    font-weight: bold;
+  }
+}
+
+.navigation{
+  margin: 0 .75em;
+}
+
+.navigation--header{
+  position: relative;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+
+.dashboard--card{
+  position: relative;
+  margin: .75em .75em .75em .75em;
+  padding: 1em;
+  min-width: 264px;
+  max-width: 500px;
+  min-height: 320px;
+}
+
+.element--card{
+  max-width: 550px;
+  min-height: 0;
+}
+.card--header{
+  @include flex-column();
+  align-items: flex-start;
+  position: relative;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+
+  &::after{
+    content: "";
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f5f7f9;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 0.5em;
+  }
+}
+
+.card--main{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.card--footer{
+  margin-top: auto;
+  margin-bottom: 1em;
+  justify-content: space-between;
+  align-items: center;
+  @include flex-column();
+
+  @include grid-media($media--tablet) {
+    @include flex-row();
+    align-items: baseline;
+  }
+}
+
+.footer--secondary{
+  margin-top: 0.75em;
+  @include grid-media($media--desktop) {
+    margin-left: auto;
+    margin-top: 0;
+  }
 }
 
 .dashboard--sidebar{
-  position: fixed;
-  height: 100%;
-  width: $dashboard--sidebar-width;
+  position: relative;
+  width: auto;
   @include flex-column();
+  justify-content: center;
   background-color: $dark-gray;
   z-index: 2;
+  @include grid-media($media--desktop) {
+    position: fixed;
+    height: 100%;
+    width: $dashboard--sidebar-width;
+    @include flex-column();
+  }
 }
 
 .sidebar--logo{
   margin-bottom: 1em;
   padding: 30px 30px 10px 30px;
-  width: auto;
-  align-self: center;
+  width: 200px;
+  align-self: flex-start;
+  @include grid-media($media--desktop) {
+    width: auto
+  }
 }
 
 .sidebar--item{
+  @include flex-row();
   padding: 1em 1em 1em 1em;
   color: $white;
   cursor: pointer;
   transition: background-color $base-duration--fast $base-timing;
+  justify-content: center;
 
+  @include grid-media($media--desktop) {
+    justify-content: flex-start;
+  }
   &.selected{
     font-weight: 600;
     background-color: $darkest-gray;
@@ -346,39 +508,29 @@ $dashboard--sidebar-width: 220px;
   margin-top: auto;
   align-self: center;
   margin-bottom: 2em;
-}
-
-.dashboard--main-content{
-  @include flex-row();
-  flex-wrap: wrap;
-  margin-top: 9em;
-  width: 680px;
-  @include grid-media($media--landscape) {
-  width: auto;
-  }
-}
-
-.dashboard--card{
-  position: relative;
-  margin: 1em 1em 1em 1em;
-  padding: 1em;
-  min-width: 480px;
-}
-
-.card--header{
   position: absolute;
-  top: -6em;
+  top: 0;
+  right: 0;
+  margin: 30px;
+    @include grid-media($media--desktop) {
+      position: relative;
+      margin-top: auto;
+    }
 }
 
 .tab--view{
+  font-size: 0.9em;
   @include flex-row();
   width: 100%;
   justify-content: space-between;
   margin-top: 1em;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .tab--view-tab{
   padding-bottom: 0.5em;
+  margin-right: 0.5em;
   cursor: pointer;
   color: $medium-gray;
   &.selected{
@@ -397,11 +549,6 @@ $dashboard--sidebar-width: 220px;
   }
 }
 
-.card--main{
-  margin-top: 1em;
-
-}
-
 .dashboard--form-footer{
   justify-content: flex-start;
   margin-top: 4em;
@@ -410,13 +557,13 @@ $dashboard--sidebar-width: 220px;
   }
 }
 
-.table-body{
+.table--body{
   position: relative;
   margin: 0 -1em;
   padding: 0 1em;
 }
 
-.table-body>dl:nth-child(even)::before{
+.table--body>dl:nth-child(even)::before{
     background-color: rgba(14,30,37,.02);
   }
 
@@ -433,21 +580,6 @@ dl::before{
 
 .table--placeholder{
   color: rgba(14,30,37,0.38);
-}
-
-.dashboard--nav{
-  @include flex-row();
-  padding: 1em 1em;
-  height: 60px;
-  position: absolute;
-  align-items: center;
-  justify-content: space-between;
-  width: auto;
-  top: 0;
-  left: 0;
-  & li{
-    margin-right: 2em;
-  }
 }
 
 /************ Design tool layout elements */
@@ -566,7 +698,6 @@ $toolbar--right-width: 400px;
   }
 }
 
-
 .design--tool-content {
   height: calc(100% - #{$toolbar--top-height});
   overflow: auto;
@@ -654,4 +785,103 @@ $toolbar--right-width: 400px;
   &.filler{
     height: 100%;
   }
+}
+
+
+/************ Custom layout for design tool */
+.dashboard--main-custom{
+    position: absolute;
+    left: $dashboard--sidebar-width;
+    width: calc(100% - #{$dashboard--sidebar-width});
+    height: 100%;
+}
+
+.dashboard--sidebar-custom{
+  position: fixed;
+  height: 100%;
+  width: $dashboard--sidebar-width;
+  @include flex-column();
+  background-color: $dark-gray;
+  z-index: 2;
+}
+
+/************* Invite link */
+.invitelink--container{
+  @include flex-row();
+  align-items: center;
+  justify-content: space-between;
+}
+
+.invitelink{
+  margin-right: 1em;
+}
+
+.invitelink--message{
+  margin-top: 1em;
+}
+
+.invitelink--text{
+  margin-top: 1em;
+  & a{
+    padding-left: 0;
+  }
+}
+
+/*********** Mail invite */
+.invitemail--container{
+  @include flex-column();
+  margin-bottom: 1em;
+  .label--second{
+    margin-left: 0px;
+
+    @include grid-media($media--landscape) {
+      margin-left: 168px;
+    }
+  }
+
+  @include grid-media($media--landscape) {
+    @include flex-row();
+  }
+
+  & input{
+    margin-right: 0px;
+    margin-bottom: 1em;
+    @include grid-media($media--landscape) {
+      margin-right: 1em;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.alert--succes{
+  @include flex-row();
+  border-radius: 0.3em;
+  background-color: #e4fbe3;
+  border: 1px solid rgba(45, 215, 43, 0.4);
+  padding: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  align-items: center;
+  & svg{
+    min-width: 30px;
+    margin-right: 10px;
+  }
+}
+
+
+/********** Collega's wijzigen */
+.collega--footer{
+  justify-content: flex-start;
+
+  & :nth-child(2){
+    margin-top: .5em;
+    @include grid-media($media--tablet) {
+      margin-top: 0;
+      margin-left: 1.5em;
+    }
+  }
+}
+
+.bizzerd--wrapper{
+  
 }

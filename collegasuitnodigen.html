@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <div class="dashboard--wrapper">
+    <div class="dashboard--sidebar">
+      <a href="" class="sidebar--logo">
+        <img src="./assets/img/bizzerd_logo.png" alt="Klik hier om naar home te gaan">
+      </a>
+      <a class="sidebar--item selected">
+        <span>Visitekaartjes beheren</span>
+      </a>
+      <a class="sidebar--item">
+        <span>Ontwerp wijzigen</span>
+      </a>
+      <a class="sidebar--item">
+        <span>Instellingen</span>
+      </a>
+      <div class="sidebar--second">
+        <a href="" class="button button--primary">Uitloggen</a>
+      </div>
+    </div>
+    <div class="dashboard--main">
+      <div class="dashboard--main-content">
+        <div class="container container--header">
+          <div class="navigation">
+            <nav>
+              <ul class="dashboard--nav">
+                <li><a href="./collegaswijzigen.html">Collega's wijzigen</a></li>
+                <li><a href="./collegastoevoegen.html">Collega's toevoegen</a></li>
+                <li><a href="./collegasuitnodigen.html" class="active">Collega's uitnodigen</a></li>
+                <li><a href="./registratielink.html">Registratielink genereren</a></li>
+              </ul>
+            </nav>
+            <header class="navigation--header">
+              <h3 class="section-title">Collega's uitnodigen voor bizzerd</h3>
+            </header>
+          </div>
+        </div>
+        <div class="container">
+          <div class="cards--wrapper">
+            <div class="card dashboard--card element--card">
+              <div class="card--header">
+                <p>Vul hier de e-mailadressen in van je collega's.</p>
+              </div>
+              <div class="card--main">
+                <div class="invitemail--container">
+                  <label for="test">E-mailadres</label>
+                  <label for="test" class="label--second">Naam (optioneel)</label>
+                </div>
+                <div class="invitemail--container">
+                  <input name="email" value="" placeholder="...@....com">
+                  <input name="firstname" value="" placeholder="Optioneel">
+                </div>
+                <div class="invitemail--container">
+                  <input name="email" value="" placeholder="...@....com">
+                  <input name="firstname" value="" placeholder="Optioneel">
+                </div>
+                <div class="invitemail--container">
+                  <input name="email" value="" placeholder="...@....com">
+                  <input name="firstname" value="" placeholder="Optioneel">
+                </div>
+                <div class="invitemail--container">
+                  <input name="email" value="" placeholder="...@....com">
+                  <input name="firstname" value="" placeholder="Optioneel">
+                </div>
+                <div class="invitemail--container">
+                  <input name="email" value="" placeholder="...@....com">
+                  <input name="firstname" value="" placeholder="Optioneel">
+                </div>
+              </div>
+              <div class="card--footer">
+                <button type="" class="button button--primary">
+                  Uitnodiging verzenden</button>
+              </div>
+              <div class="alert--succes">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="has-solid " viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true" role="img" width="32"
+                  height="32" fill="currentColor">
+                  <path class="clr-i-outline clr-i-outline-path-1" d="M18,2A16,16,0,1,0,34,18,16,16,0,0,0,18,2Zm0,30A14,14,0,1,1,32,18,14,14,0,0,1,18,32Z" />
+                  <path class="clr-i-outline clr-i-outline-path-2" d="M28,12.1a1,1,0,0,0-1.41,0L15.49,23.15l-6-6A1,1,0,0,0,8,18.53L15.49,26,28,13.52A1,1,0,0,0,28,12.1Z" />
+                  <path class="clr-i-solid clr-i-solid-path-1" d="M18,2A16,16,0,1,0,34,18,16,16,0,0,0,18,2ZM28.45,12.63,15.31,25.76,7.55,18a1.4,1.4,0,0,1,2-2l5.78,5.78L26.47,10.65a1.4,1.4,0,1,1,2,2Z" style="display:none" /></svg>
+                <span class="c-alert__message">Er is een uitnodiging verzonden naar ..., ..., ..., ..., ..., ... en ... .</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

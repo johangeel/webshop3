@@ -63,6 +63,12 @@ h3 {
   }
 }
 
+h4 {
+  color: $base-header-color;
+  font-weight: 600;
+  margin: 2px 0 6px;
+}
+
 p {
   font-size: $article-font-size;
   margin: 0 0 0.5em;
