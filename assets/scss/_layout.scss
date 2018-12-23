@@ -827,6 +827,10 @@ $toolbar--right-width: 400px;
   }
 }
 
+.sharelink--selector{
+  width: 12em;
+}
+
 /*********** Mail invite */
 .invitemail--container{
   @include flex-column();

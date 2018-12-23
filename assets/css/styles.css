@@ -2088,6 +2088,9 @@ dl::before {
   .invitelink--text a {
     padding-left: 0; }
 
+.sharelink--selector {
+  width: 12em; }
+
 /*********** Mail invite */
 .invitemail--container {
   box-sizing: border-box;
