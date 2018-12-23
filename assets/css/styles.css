@@ -440,6 +440,7 @@ button, [type='button'], [type='reset'], [type='submit'],
     transform: translateY(-2px); }
   .button--primary:active {
     outline: 0;
+    background-color: #f69e0a;
     transform: translateY(1px);
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.04), 0 1px 3px rgba(0, 0, 0, 0.04); }
 
@@ -474,6 +475,28 @@ button, [type='button'], [type='reset'], [type='submit'],
     color: #F7A823; }
   .button--text:active {
     outline: 0; }
+
+.button--danger {
+  background-color: #FB6D77;
+  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  color: #fff;
+  transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, box-shadow, transform; }
+  .button--danger:focus {
+    background-color: #fc868e;
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    transform: translateY(-2px); }
+  .button--danger:hover {
+    background-color: #fc868e;
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    transform: translateY(-2px); }
+  .button--danger:active {
+    background-color: #fa5460;
+    outline: 0;
+    transform: translateY(1px);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.04), 0 1px 3px rgba(0, 0, 0, 0.04); }
 
 .button--hamburger {
   background-color: transparent;
@@ -599,10 +622,13 @@ dl {
 dt {
   font-weight: 600;
   margin: 0;
-  min-width: 10em; }
+  min-width: 14em; }
 
 dd {
-  margin: 0; }
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 li {
   margin: 0 0 0.75em; }
@@ -1444,7 +1470,7 @@ body {
     border-radius: 0.5em; }
   .dashboard--nav li {
     margin: 0 2em 0.5em 0;
-    width: auto; }
+    width: 220px; }
   .dashboard--nav > li > a {
     padding: .25em .25em;
     font-weight: normal; }
@@ -1468,7 +1494,7 @@ body {
   min-height: 320px; }
 
 .element--card {
-  max-width: 550px;
+  max-width: 680px;
   min-height: 0; }
 
 .card--header {
@@ -1686,8 +1712,7 @@ body {
 
 .table--body {
   position: relative;
-  margin: 0 -1em;
-  padding: 0 1em; }
+  margin: 0.75em 0em; }
 
 .table--body > dl:nth-child(even)::before {
   background-color: rgba(14, 30, 37, 0.02); }
@@ -2143,5 +2168,82 @@ dl::before {
       .collega--footer :nth-child(2) {
         margin-top: 0;
         margin-left: 1.5em; } }
+
+.bizzerd--cards-wrapper {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
+  @media only screen and (min-width: 550px) {
+    .bizzerd--cards-wrapper {
+      justify-content: flex-start; } }
+  .bizzerd--cards-wrapper .bizzerd {
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 1em;
+    box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+    transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: box-shadow, transform; }
+    .bizzerd--cards-wrapper .bizzerd:focus {
+      transform: translateY(-2px); }
+    .bizzerd--cards-wrapper .bizzerd:hover {
+      transform: translateY(-2px); }
+    .bizzerd--cards-wrapper .bizzerd:active {
+      outline: 0;
+      transform: translateY(1px); }
+
+.bizzerd--wrapper {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center; }
+
+/************ Ontwerp wijzigen */
+.placeholder--container {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 450px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: .5em;
+  padding-right: .5em; }
 
 /*# sourceMappingURL=styles.css.map */

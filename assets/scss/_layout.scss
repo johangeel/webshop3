@@ -373,11 +373,12 @@ $dashboard--sidebar-width: 210px;
 
   & li{
     margin: 0 2em 0.5em 0;
-    width: auto;
+    width: 220px;
   }
   >li>a{
     padding: .25em .25em;
     font-weight: normal;
+
   }
   >li>a.active{
     font-weight: bold;
@@ -405,7 +406,7 @@ $dashboard--sidebar-width: 210px;
 }
 
 .element--card{
-  max-width: 550px;
+  max-width: 680px;
   min-height: 0;
 }
 .card--header{
@@ -559,8 +560,7 @@ $dashboard--sidebar-width: 210px;
 
 .table--body{
   position: relative;
-  margin: 0 -1em;
-  padding: 0 1em;
+  margin: 0.75em 0em;
 }
 
 .table--body>dl:nth-child(even)::before{
@@ -882,6 +882,53 @@ $toolbar--right-width: 400px;
   }
 }
 
+.bizzerd--cards-wrapper{
+  @include flex-row();
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  @include grid-media($media--landscape) {
+    justify-content: flex-start;
+  }
+  & .bizzerd{
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 1em;
+    box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+
+      transition: $base-duration--fast $base-timing;
+      transition-property: box-shadow, transform;
+
+      &:focus {
+        transform: translateY(-2px);
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      &:active{
+        outline: 0;
+        transform: translateY(1px);
+      }
+  }
+}
+
 .bizzerd--wrapper{
-  
+  @include flex-column();
+  align-items: center;
+}
+
+/************ Ontwerp wijzigen */
+.placeholder--container{
+  @include flex-column;
+  align-items: center;
+  justify-content: space-around;
+  height: 450px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: .5em;
+  padding-right: .5em;
 }
