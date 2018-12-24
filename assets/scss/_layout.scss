@@ -373,7 +373,7 @@ $dashboard--sidebar-width: 210px;
 
   & li{
     margin: 0 2em 0.5em 0;
-    width: 220px;
+    width: auto;
   }
   >li>a{
     padding: .25em .25em;
@@ -563,7 +563,7 @@ $dashboard--sidebar-width: 210px;
   margin: 0.75em 0em;
 }
 
-.table--body>dl:nth-child(even)::before{
+.table--body > dl:nth-child(even)::before{
     background-color: rgba(14,30,37,.02);
   }
 
@@ -839,7 +839,7 @@ $toolbar--right-width: 400px;
     margin-left: 0px;
 
     @include grid-media($media--landscape) {
-      margin-left: 168px;
+      margin-left: 198px;
     }
   }
 

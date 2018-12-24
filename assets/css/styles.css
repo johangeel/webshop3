@@ -657,19 +657,27 @@ table {
   width: 100%; }
 
 th {
-  border-bottom: 1px solid #737373;
   font-weight: 600;
   padding: 0.6em 0;
   text-align: left; }
 
 td {
-  border-bottom: 1px solid #bfbfbf;
   padding: 0.6em 0; }
 
 tr,
 td,
 th {
-  vertical-align: middle; }
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+td,
+th {
+  padding: 0.5em; }
+
+.table--body > tbody > tr:nth-child(even) {
+  background-color: rgba(14, 30, 37, 0.02); }
 
 html {
   color: #444;
@@ -1470,7 +1478,7 @@ body {
     border-radius: 0.5em; }
   .dashboard--nav li {
     margin: 0 2em 0.5em 0;
-    width: 220px; }
+    width: auto; }
   .dashboard--nav > li > a {
     padding: .25em .25em;
     font-weight: normal; }
@@ -2111,7 +2119,7 @@ dl::before {
     margin-left: 0px; }
     @media only screen and (min-width: 550px) {
       .invitemail--container .label--second {
-        margin-left: 168px; } }
+        margin-left: 198px; } }
   @media only screen and (min-width: 550px) {
     .invitemail--container {
       box-sizing: border-box;
