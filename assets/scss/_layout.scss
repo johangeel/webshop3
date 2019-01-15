@@ -287,10 +287,10 @@ body {
 }
 
 .bedrijfsnaam--suffix{
-  padding-bottom: 1em;
-  padding-top: 1em;
   padding-left: .25em;
-  margin-bottom: 1.25em;
+  @include flex-row();
+  align-items: center;
+  justify-content: center;
 }
 
 .modal{
@@ -406,8 +406,9 @@ $dashboard--sidebar-width: 210px;
 }
 
 .element--card{
-  max-width: 680px;
+  max-width: none;
   min-height: 0;
+  width: 100%;
 }
 .card--header{
   @include flex-column();
@@ -595,7 +596,7 @@ $toolbar--right-width: 400px;
   z-index: 2;
   height: $toolbar--top-height;
   position: fixed;
-  width: calc(100vw - 220px);
+  width: calc(100% - #{$dashboard--sidebar-width});
   align-items: center;
   justify-content: space-between;
 }
@@ -901,21 +902,13 @@ $toolbar--right-width: 400px;
     margin: 1em;
     box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
     -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+    position: relative;
 
       transition: $base-duration--fast $base-timing;
-      transition-property: box-shadow, transform;
-
-      &:focus {
-        transform: translateY(-2px);
-      }
-
-      &:hover {
-        transform: translateY(-2px);
-      }
+      transition-property: box-shadow;
 
       &:active{
         outline: 0;
-        transform: translateY(1px);
       }
   }
 }

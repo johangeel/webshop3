@@ -1365,10 +1365,23 @@ body {
     font-weight: 600; }
 
 .bedrijfsnaam--suffix {
-  padding-bottom: 1em;
-  padding-top: 1em;
   padding-left: .25em;
-  margin-bottom: 1.25em; }
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
 
 .modal button {
   align-self: center; }
@@ -1507,8 +1520,9 @@ body {
   min-height: 320px; }
 
 .element--card {
-  max-width: 680px;
-  min-height: 0; }
+  max-width: none;
+  min-height: 0;
+  width: 100%; }
 
 .card--header {
   box-sizing: border-box;
@@ -1766,7 +1780,7 @@ dl::before {
   z-index: 2;
   height: 74px;
   position: fixed;
-  width: calc(100vw - 220px);
+  width: calc(100% - 210px);
   align-items: center;
   justify-content: space-between; }
 
@@ -2213,15 +2227,11 @@ dl::before {
     margin: 1em;
     box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
     -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+    position: relative;
     transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: box-shadow, transform; }
-    .bizzerd--cards-wrapper .bizzerd:focus {
-      transform: translateY(-2px); }
-    .bizzerd--cards-wrapper .bizzerd:hover {
-      transform: translateY(-2px); }
+    transition-property: box-shadow; }
     .bizzerd--cards-wrapper .bizzerd:active {
-      outline: 0;
-      transform: translateY(1px); }
+      outline: 0; }
 
 .bizzerd--wrapper {
   box-sizing: border-box;
