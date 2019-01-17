@@ -622,6 +622,7 @@ $toolbar--right-width: 400px;
   background-color: $dark-gray;
   height: calc(100% - #{$toolbar--top-height});
   z-index: 1;
+  font-size: 0.9em;
 }
 
 .tool--color-button{
@@ -641,8 +642,8 @@ $toolbar--right-width: 400px;
   transition: $base-duration--fast $base-timing;
   background-color: inherit;
   margin: 0 0.25em;
-  padding: .4em .8em;
-  font-size: 0.9em;
+  padding: .4em .4em;
+  font-size: 0.75em;
   @include flex-row();
   text-transform: inherit;
   align-items: center;
@@ -755,7 +756,8 @@ $toolbar--right-width: 400px;
 .pane--item{
   width: 100%;
   border-radius: .3em;
-  margin: 0 1em 0 1em;
+  margin: 0 .1em;
+  padding: 0.75em;
 }
 
 .right--tab-nav{
@@ -773,7 +775,7 @@ $toolbar--right-width: 400px;
 .nav--tabs-button{
   @include flex-column();
   background-color: #444;
-  padding: 2em;
+  padding: 1em;
   &.active{
     background-color: inherit;
   }

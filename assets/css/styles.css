@@ -898,6 +898,9 @@ span {
     .tooltip--item .tooltip.active {
       opacity: 1;
       visibility: visible; }
+    .tooltip--item .tooltip.right {
+      right: 0;
+      left: auto; }
     .tooltip--item .tooltip ul {
       height: 35vh;
       width: 9em;
@@ -1829,7 +1832,8 @@ dl::before {
   flex-direction: row;
   background-color: #444;
   height: calc(100% - 74px);
-  z-index: 1; }
+  z-index: 1;
+  font-size: 0.9em; }
 
 .tool--color-button {
   transition: 180ms cubic-bezier(0.4, 0, 0.2, 1); }
@@ -1844,8 +1848,8 @@ dl::before {
   transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: inherit;
   margin: 0 0.25em;
-  padding: .4em .8em;
-  font-size: 0.9em;
+  padding: .4em .4em;
+  font-size: 0.75em;
   box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2010,7 +2014,8 @@ dl::before {
 .pane--item {
   width: 100%;
   border-radius: .3em;
-  margin: 0 1em 0 1em; }
+  margin: 0 .1em;
+  padding: 0.75em; }
 
 .right--tab-nav {
   height: 100%;
@@ -2049,7 +2054,7 @@ dl::before {
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: #444;
-  padding: 2em; }
+  padding: 1em; }
   .nav--tabs-button.active {
     background-color: inherit; }
   .nav--tabs-button.up {

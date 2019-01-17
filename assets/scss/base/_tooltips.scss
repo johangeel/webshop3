@@ -26,7 +26,6 @@
     border-radius: 0.3em;
     box-shadow: $tooltip-shadow;
     color: $tooltip-color;
-    // font-size: 0.9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
     line-height: 1.5em;
     margin: 0 auto;
     padding: 1em;
@@ -52,6 +51,11 @@
     &.active{
       opacity: 1;
       visibility: visible;
+    }
+
+    &.right{
+      right: 0;
+      left: auto;
     }
 
         & ul{
