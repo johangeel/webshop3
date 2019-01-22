@@ -81,7 +81,6 @@ a {
   text-decoration-skip: ink;
   transition: color $base-duration--fast $base-timing;
 
-
   &:hover {
     color: $action-color;
   }
@@ -89,6 +88,10 @@ a {
   &:focus {
     outline: $focus-outline;
     outline-offset: $focus-outline-offset;
+  }
+
+  &.underline{
+    text-decoration: underline;
   }
 }
 
