@@ -939,17 +939,26 @@ $toolbar--right-width: 400px;
   position: absolute;
   visibility: hidden;
   transition: $base-duration--fast $base-timing;
-  transition-property: opacity, visibility;
+  transition-property: opacity, visibility, background-color;
   top: 0;
   right: 0;
   opacity: 0;
   color: black;
-  margin: 12px;
+  margin: 6px;
+  padding: 6px;
+  background-color: rgba(17, 17, 17, .8);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  line-height: 1;
+  border-radius: 4px;
 }
 
 .bizzerd:hover{
   .testbutton{
     opacity: 1;
     visibility: visible;
+    &:hover{
+      background-color: $danger-red;
+    }
   }
 }
