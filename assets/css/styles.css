@@ -2364,7 +2364,7 @@ dl::before {
   padding-right: .5em; }
 
 /************ Delete button on hover test */
-.testbutton {
+.button--hover {
   display: block;
   position: absolute;
   visibility: hidden;
@@ -2382,10 +2382,10 @@ dl::before {
   line-height: 1;
   border-radius: 4px; }
 
-.bizzerd:hover .testbutton {
+.bizzerd:hover .button--hover {
   opacity: 1;
   visibility: visible; }
-  .bizzerd:hover .testbutton:hover {
+  .bizzerd:hover .button--hover:hover {
     background-color: #FB6D77; }
 
 /*# sourceMappingURL=styles.css.map */

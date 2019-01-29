@@ -934,7 +934,7 @@ $toolbar--right-width: 400px;
 }
 
 /************ Delete button on hover test */
-.testbutton{
+.button--hover{
   display: block;
   position: absolute;
   visibility: hidden;
@@ -954,7 +954,7 @@ $toolbar--right-width: 400px;
 }
 
 .bizzerd:hover{
-  .testbutton{
+  .button--hover{
     opacity: 1;
     visibility: visible;
     &:hover{
