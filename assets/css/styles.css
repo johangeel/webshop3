@@ -2029,8 +2029,8 @@ dl::before {
   align-items: center; }
 
 .design--tool-canvas {
-  width: 448px;
-  height: 700px;
+  width: 640px;
+  height: 1000px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
