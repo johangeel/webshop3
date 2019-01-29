@@ -584,7 +584,7 @@ dl::before{
 }
 
 /************ Design tool layout elements */
-$toolbar--top-height: 74px;
+$toolbar--top-height: 58px;
 $toolbar--right-width: 400px;
 
 .toolbar--top{
@@ -720,8 +720,8 @@ $toolbar--right-width: 400px;
 }
 
 .design--tool-canvas{
-  width: 640px;
-  height: 1000px;
+  width: 448px;
+  height: 700px;
   @include flex-row();
   justify-content: center;
   align-items: center;
@@ -832,6 +832,7 @@ $toolbar--right-width: 400px;
 
 .sharelink--selector{
   width: 12em;
+  color: $dark-gray;
 }
 
 /*********** Mail invite */
@@ -930,4 +931,25 @@ $toolbar--right-width: 400px;
   padding-bottom: 2em;
   padding-left: .5em;
   padding-right: .5em;
+}
+
+/************ Delete button on hover test */
+.testbutton{
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  transition: $base-duration--fast $base-timing;
+  transition-property: opacity, visibility;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  color: black;
+  margin: 12px;
+}
+
+.bizzerd:hover{
+  .testbutton{
+    opacity: 1;
+    visibility: visible;
+  }
 }
