@@ -2372,7 +2372,7 @@ dl::before {
   padding-left: .5em;
   padding-right: .5em; }
 
-/************ Delete button on hover test */
+/************ Delete button on hover */
 .button--hover {
   display: block;
   position: absolute;
@@ -2396,5 +2396,41 @@ dl::before {
   visibility: visible; }
   .bizzerd:hover .button--hover:hover {
     background-color: #FB6D77; }
+
+/************ Notification banner */
+.notification--banner {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  color: #fff;
+  position: relative;
+  min-height: 50px;
+  background-color: #F7A823;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  padding: 24px; }
+  .notification--banner span {
+    margin-left: auto;
+    max-width: 220px; }
+    @media only screen and (min-width: 768px) {
+      .notification--banner span {
+        max-width: inherit; } }
+  .notification--banner a {
+    color: black; }
+  .notification--banner .notification--banner-close {
+    margin-left: auto; }
 
 /*# sourceMappingURL=styles.css.map */

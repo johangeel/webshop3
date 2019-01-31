@@ -933,7 +933,7 @@ $toolbar--right-width: 400px;
   padding-right: .5em;
 }
 
-/************ Delete button on hover test */
+/************ Delete button on hover */
 .button--hover{
   display: block;
   position: absolute;
@@ -960,5 +960,34 @@ $toolbar--right-width: 400px;
     &:hover{
       background-color: $danger-red;
     }
+  }
+}
+
+/************ Notification banner */
+.notification--banner{
+  @include flex-row();
+  color: $white;
+  position: relative;
+  min-height: 50px;
+  background-color: $action-color;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $shadow-normal;
+  -webkit-box-shadow: $shadow-normal;
+  padding: 24px;
+
+  & span{
+    margin-left: auto;
+    max-width: 220px;
+    @include grid-media($media--tablet) {
+      max-width: inherit;
+    }
+  }
+  & a{
+    color: black;
+  }
+
+  & .notification--banner-close{
+    margin-left: auto;
   }
 }
