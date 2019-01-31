@@ -2421,13 +2421,14 @@ dl::before {
   align-items: center;
   box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
   -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
-  padding: 24px; }
+  padding: 6px 24px; }
   .notification--banner span {
     margin-left: auto;
-    max-width: 220px; }
+    max-width: 511px;
+    font-size: 0.9em; }
     @media only screen and (min-width: 768px) {
       .notification--banner span {
-        max-width: inherit; } }
+        max-width: 711px; } }
   .notification--banner a {
     color: black; }
   .notification--banner .notification--banner-close {

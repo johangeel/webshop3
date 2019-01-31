@@ -974,13 +974,14 @@ $toolbar--right-width: 400px;
   align-items: center;
   box-shadow: $shadow-normal;
   -webkit-box-shadow: $shadow-normal;
-  padding: 24px;
+  padding: 6px 24px;
 
   & span{
     margin-left: auto;
-    max-width: 220px;
+    max-width: 511px;
+    font-size: 0.9em;
     @include grid-media($media--tablet) {
-      max-width: inherit;
+      max-width: 711px;
     }
   }
   & a{
